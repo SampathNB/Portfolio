@@ -9,7 +9,7 @@ interface SectionTypes {
 export const Section = ({ className, children }: SectionTypes) => {
   return (
     <>
-      <section className={clsx('py-32', className)}>
+      <section className={clsx(className ? className : 'py-32')}>
         {children}
       </section>
     </>

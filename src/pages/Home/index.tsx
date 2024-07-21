@@ -84,6 +84,7 @@ export const Home = () => {
               <div className="flex flex-col items-start h-full justify-between">
                 <div>
                   <Title
+                    isLight={false}
                     className="pb-8"
                     subtext="My Story"
                     text="About Me"
@@ -112,6 +113,25 @@ export const Home = () => {
             </div>
             <div className="w-2/5">
               <img src={About} alt="" />
+            </div>
+          </div>
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Title
+            className="mb-5"
+            subtextClassName="border-black"
+            subtext="Exprtise"
+            text="What I Do"
+          />
+          <div className="grid grid-cols-4 gap-6 text-black">
+            <div className="bg-blue-300 p-4 flex flex-col gap-7">
+              <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" />
+              <div>
+                <h4 className="text-xl font-medium mb-2">Web Development</h4>
+                <p className="text-sm">From concept to code, I bring designs to life for seamless online experiences.</p>
+              </div>
             </div>
           </div>
         </Container>
