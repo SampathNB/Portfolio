@@ -117,7 +117,7 @@ export const Home = () => {
           </div>
         </Container>
       </Section>
-      <Section>
+      <Section noBottomSpace>
         <Container>
           <Title
             className="mb-5"
@@ -125,12 +125,55 @@ export const Home = () => {
             subtext="Exprtise"
             text="What I Do"
           />
-          <div className="grid grid-cols-4 gap-6 text-black">
-            <div className="bg-blue-300 p-4 flex flex-col gap-7">
+          <div className="grid grid-cols-4 gap-5 text-black">
+            <div className="bg-blue-200 p-4 flex flex-col gap-7">
               <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" />
               <div>
                 <h4 className="text-xl font-medium mb-2">Web Development</h4>
                 <p className="text-sm">From concept to code, I bring designs to life for seamless online experiences.</p>
+              </div>
+            </div>
+            <div className="bg-pink-200 p-4 flex flex-col gap-7">
+              <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" />
+              <div>
+                <h4 className="text-xl font-medium mb-2">Mobile App</h4>
+                <p className="text-sm">Create intuitive and visually appealing designs for iOS and Android applications.</p>
+              </div>
+            </div>
+            <div className="bg-green-200 p-4 flex flex-col gap-7">
+              <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" />
+              <div>
+                <h4 className="text-xl font-medium mb-2">Webflow</h4>
+                <p className="text-sm">I bring innovation to user experiences by incorporating dynamic & engaging design</p>
+              </div>
+            </div>
+            <div className="bg-purple-200 p-4 flex flex-col gap-7">
+              <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" />
+              <div>
+                <h4 className="text-xl font-medium mb-2">e-Commerce</h4>
+                <p className="text-sm">I specialize in crafting captivating and user-centric e-commerce experiences</p>
+              </div>
+            </div>
+          </div>
+        </Container>
+      </Section>
+      <Section>
+        <Container>
+          <Title
+            className="mb-5"
+            subtextClassName="border-black"
+            subtext="Testimonials"
+            text="Clients Review"
+          />
+          <div className="flex">
+            <div className="border border-opacity-15 border-black p-6">
+              <p>"Working with parker has been an absolute pleasure. Their dedication to delivering high-quality designs with a user-centric approach is truly commendable. The seamless collaboration and attention to detail make them a standout designer in the field."</p>
+              <div className="flex items-center mt-10 gap-4">
+                <img className="rounded-full" src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f7cf667288515146921861_avtar-01-p-500.jpg" alt="" width={65} height={65} />
+                <div>
+                  <h5 className="text-black">Esther Howard</h5>
+                  <p className="text-sm">Tech Solutions</p>
+                </div>
               </div>
             </div>
           </div>
