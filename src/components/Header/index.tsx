@@ -31,14 +31,15 @@ export const Header = ({ className, onHomePage = false }: HeaderTypes) => {
                 <span className={barClassName}></span>
               </button>
               {showMenu && <div className="relative w-full">
-                <div className="absolute border border-gray-200 p-3 right-0 top-3 flex flex-col w-40">
-                  <div className="flex flex-col text-sm text-center gap-2">
+                <div className="absolute border border-gray-200 p-3 right-0 top-3 flex flex-col text-sm">
+                  <div className="flex flex-col text-center gap-2 border-b border-gray-200 pb-2 mb-2">
                     {pageLinks.map((link, index) => {
                       return (
-                        <a className="whitespace-nowrap" key={index} href={link.link}>{link.text}</a>
+                        <a className="whitespace-nowrap hover:text-black transition-colors" key={index} href={link.link}>{link.text}</a>
                       )
                     })}
                   </div>
+                  <a href="mailto:bingisampat@gmail.com" className="hover:text-black transition-colors">bingisampat@gmail.com</a>
                 </div>
               </div>}
             </div>
