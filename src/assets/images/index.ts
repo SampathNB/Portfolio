@@ -1,2 +1,11 @@
-export { default as About } from "./cover/about.jpg";
-
+export {default as About} from "./cover/about.jpg";
+export {default as AngelusHomeCare} from "./portfolios/angelus-homecare.webp";
+export {default as Espresso} from "./portfolios/espresso.webp";
+export {default as GrandPMS} from "./portfolios/grand-pms.webp";
+export {default as Handshake} from "./portfolios/handshake.webp";
+export {default as HVN} from "./portfolios/hvn.webp";
+export {default as PEGClub} from "./portfolios/peg-club.webp";
+export {default as Swapier} from "./portfolios/swapier.webp";
+export {default as Veesion} from "./portfolios/veesion.webp";
+export {default as WalkerBay} from "./portfolios/walkersbay.webp";
+export {default as Sampath} from "./Sampath.webp";
