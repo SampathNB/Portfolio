@@ -1,5 +1,6 @@
-import { Icons, pageLinks } from "@utils";
-import { Container } from "../ElementsComponents";
+import {Icons, pageLinks} from "@utils";
+import {NavLink} from "react-router-dom";
+import {Container} from "../ElementsComponents";
 
 export const Footer = () => {
   return (
@@ -20,9 +21,9 @@ export const Footer = () => {
                 <div className="flex flex-col text-sm gap-2">
                   {pageLinks.map((link, index) => {
                     return (
-                      <a key={index} href={link.link} className="hover:text-white transition-colors">
+                      <NavLink key={index} to={link.link} className="hover:text-white transition-colors capitalize">
                         {link.text}
-                      </a>
+                      </NavLink>
                     );
                   })}
                 </div>

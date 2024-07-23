@@ -1,6 +1,6 @@
-import {Button, Container, Footer, Header, Section, Title} from "@components";
+import {Button, Container, Footer, Header, Portfolios, Section, Title} from "@components";
 import {About, Sampath} from "@images";
-import {Icons, Portfolios} from "@utils";
+import {Icons} from "@utils";
 
 export const Home = () => {
   const skills = ["Collaboration", "Design", "development", "Optimization", "Management", "Communication"];
@@ -21,7 +21,7 @@ export const Home = () => {
   return (
     <>
       <section className="relative">
-        <Header className="w-1/2" />
+        <Header isHomePage className="w-1/2" />
         <Container>
           <div className="py-28 w-1/2 pr-16">
             <Title isPageTitle className="mb-6" text="Crafting Connections Your Interface Expert" />
@@ -153,35 +153,7 @@ export const Home = () => {
           </div>
         </Container>
       </Section>
-      <Section>
-        <Container>
-          <Title className="mb-5" subtextClassName="border-black" subtext="Creation" text="Selected Works" />
-          <div className="grid grid-cols-2 gap-10">
-            {Portfolios &&
-              Portfolios.map((portfolio, index) => {
-                return (
-                  index < 4 && (
-                    <div key={index} className="">
-                      <img className="aspect-video object-cover mb-3" src={portfolio.img} alt={portfolio.name} />
-                      <div className="flex items-center justify-between">
-                        <h5 className="text-lg text-black font-medium">{portfolio.name}</h5>
-                        <p className="text-sm">
-                          {portfolio.techs.map((tech, index) => (
-                            <span key={index}>
-                              {tech}
-                              {!(index + 1 === portfolio.techs.length) && ","}{" "}
-                            </span>
-                          ))}
-                          -- {portfolio.year}
-                        </p>
-                      </div>
-                    </div>
-                  )
-                );
-              })}
-          </div>
-        </Container>
-      </Section>
+      <Portfolios title="Selected Works" length={4} />
       <Section className="bg-[#dbd2c2] py-16">
         <Container className="flex items-center justify-between">
           <div className="max-w-[560px]">

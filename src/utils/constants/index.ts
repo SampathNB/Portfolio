@@ -1,21 +1,21 @@
-import { AngelusHomeCare, Espresso, GrandPMS, HVN, PEGClub, Swapier, Veesion, WalkerBay } from "@images";
+import {AngelusHomeCare, Espresso, GrandPMS, HVN, PEGClub, Swapier, Veesion, WalkerBay} from "@images";
 
 export const pageLinks = [
   {
-    text: "About us",
-    link: "#",
+    text: "About me",
+    link: "/about-me",
   },
   {
     text: "My Works",
-    link: "#",
+    link: "/portfolio",
   },
   {
     text: "Contact me",
-    link: "#",
+    link: "/contact-me",
   },
 ];
 
-export const Portfolios = [
+export const PortfolioData = [
   {
     img: AngelusHomeCare,
     name: "Angelus Home Care",
