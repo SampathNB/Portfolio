@@ -1,6 +1,6 @@
-import {Button, Container, Footer, Header, Portfolios, Section, Title} from "@components";
-import {About, Sampath} from "@images";
-import {Icons} from "@utils";
+import { Button, Container, Footer, Header, Portfolios, Section, Title } from "@components";
+import { About, Sampath } from "@images";
+import { Icons } from "@utils";
 
 export const Home = () => {
   const skills = ["Collaboration", "Design", "development", "Optimization", "Management", "Communication"];
