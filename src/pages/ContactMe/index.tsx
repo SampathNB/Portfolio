@@ -1,27 +1,52 @@
 import { Button, Container, Footer, Header, Input, Section, Textarea, Title } from "@components";
-import emailjs from '@emailjs/browser';
 import { Icons } from "@utils";
-import { useRef } from "react";
+import { useCallback, useRef } from "react";
+import { useForm } from "react-hook-form";
+
+
+const useYupValidationResolver = (validationSchema: { validate: (arg0: any, arg1: { abortEarly: boolean; }) => any; }) =>
+  useCallback(
+    async (data: any) => {
+      try {
+        const values = await validationSchema.validate(data, {
+          abortEarly: false,
+        })
+
+        return {
+          values,
+          errors: {},
+        }
+      } catch (errors: any) {
+        return {
+          values: {},
+          errors: errors.inner.reduce(
+            (allErrors: any, currentError: { path: any; type: any; message: any; }) => ({
+              ...allErrors,
+              [currentError.path]: {
+                type: currentError.type ?? "validation",
+                message: currentError.message,
+              },
+            }),
+            {}
+          ),
+        }
+      }
+    },
+    [validationSchema]
+  )
+
 
 export const ContactMe = () => {
   const form = useRef();
+  const resolver = useYupValidationResolver(validationSchema)
+  const { handleSubmit, register } = useForm({ resolver })
+
+
 
   const sendEmail = (e: any) => {
     e.preventDefault();
 
-    emailjs
-      .sendForm('service_ftuy8fd', 'template_cozaibe', form.current, {
-        publicKey: '7B_NcpWllf2uhIhNe',
-      })
-      .then(
-        () => {
-          alert('message sent successfuly!')
-          console.log('SUCCESS!');
-        },
-        (error) => {
-          alert('FAILED...' + error.text)
-        },
-      );
+
   };
   return (
     <>

@@ -1,19 +1,19 @@
-import {pageLinks} from "@utils";
+import { pageLinks } from "@utils";
 import clsx from "clsx";
-import {useState} from "react";
-import {Link, NavLink} from "react-router-dom";
-import {Button} from "../Button";
-import {Container} from "../ElementsComponents";
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+import { Button } from "../Button";
+import { Container } from "../ElementsComponents";
 
 interface HeaderTypes {
   className?: string;
   isHomePage?: boolean;
 }
 
-export const Header = ({className, isHomePage = false}: HeaderTypes) => {
+export const Header = ({ className, isHomePage = false }: HeaderTypes) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
-  const barClassName = "block bg-black w-5 h-[1px] opacity-60 transition transition-transform transition-opacity transform ease-in";
+  const barClassName = "block bg-gray-600 w-5 h-[1px] transition transition-transform transition-opacity transform ease-in";
 
   return (
     <>
