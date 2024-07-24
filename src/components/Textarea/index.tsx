@@ -7,15 +7,19 @@ interface TextareaTypes {
   onChange: ChangeEventHandler<HTMLTextAreaElement>;
   errorText?: string;
   className?: string;
+  name?: string;
+  id?: string;
 }
 
-export const Textarea = ({ icon, onChange, placeholder, errorText, className }: TextareaTypes) => {
+export const Textarea = ({ icon, onChange, placeholder, errorText, className, name, id }: TextareaTypes) => {
   return (
     <>
       <div className={clsx("text-sm text-black", className)}>
         <div className="relative">
           <span className="absolute top-3 left-2">{icon}</span>
           <textarea
+            name={name}
+            id={id}
             rows={6}
             placeholder={placeholder}
             onChange={onChange}

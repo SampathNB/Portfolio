@@ -1,4 +1,4 @@
-import {ChangeEventHandler, ReactNode} from "react";
+import { ChangeEventHandler, ReactNode } from "react";
 
 interface InputTypes {
   placeholder: string;
@@ -6,15 +6,19 @@ interface InputTypes {
   type: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
   errorText?: string;
+  name?: string;
+  id?: string;
 }
 
-export const Input = ({icon, onChange, placeholder, type, errorText}: InputTypes) => {
+export const Input = ({ icon, onChange, placeholder, type, errorText, name, id }: InputTypes) => {
   return (
     <>
       <div className="text-sm text-black">
         <div className="relative">
           <span className="absolute top-1/2 transform -translate-y-1/2 left-2">{icon}</span>
           <input
+            name={name}
+            id={id}
             type={type}
             placeholder={placeholder}
             onChange={onChange}

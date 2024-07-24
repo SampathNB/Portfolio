@@ -1,4 +1,4 @@
-import {AngelusHomeCare, Espresso, GrandPMS, HVN, PEGClub, Swapier, Veesion, WalkerBay} from "@images";
+import { AngelusHomeCare, Espresso, GrandPMS, HVN, PEGClub, Swapier, Veesion, WalkerBay } from "@images";
 
 export const pageLinks = [
   {
@@ -14,6 +14,13 @@ export const pageLinks = [
     link: "/contact-me",
   },
 ];
+
+export const socialLinks = [
+  {
+    text: "Facebook",
+    link: "",
+  }
+]
 
 export const PortfolioData = [
   {
