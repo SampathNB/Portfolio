@@ -7,13 +7,13 @@ export const AboutMe = () => {
       <Header />
       <Section noBottomSpace>
         <Container>
-          <Title subtext="About Me" text="Meet Sampath" className="mb-7" />
-          <div className="flex gap-20 justify-between">
-            <div className="w-2/5">
+          <Title subtext="About Me" text="Meet Sampath" className="2xl:mb-7 mb-4" />
+          <div className="flex 2xl:gap-20 gap-10 justify-between">
+            <div className="w-2/5 lg:block hidden">
               <img src={About} alt="" />
             </div>
-            <div className="w-3/5">
-              <div className="flex flex-col gap-4 items-start">
+            <div className="lg:w-3/5">
+              <div className="flex flex-col small-2xl:gap-4 gap-2 items-start">
                 <p>
                   Hello! I'm Parker, a passionate creator on a mission to craft meaningful digital experiences. With a blend of creativity and technical
                   expertise, I specialize in weaving seamless journeys that leave a lasting impact.
@@ -28,15 +28,15 @@ export const AboutMe = () => {
                   project. It's more than just a job; it's a calling to turn ideas into extraordinary digital experiences.
                 </p>
                 <div className="border-b border-gray-200 w-full pb-3">
-                  <h6 className="text-black text-lg font-medium mb-2">User-Centric Approach</h6>
+                  <h6 className="text-black xl:text-lg text-base font-medium mb-2">User-Centric Approach</h6>
                   <p>Prioritizing user needs and preferences in every decision.</p>
                 </div>
                 <div className="border-b border-gray-200 w-full pb-3">
-                  <h6 className="text-black text-lg font-medium mb-2">Collaboration and Communication</h6>
+                  <h6 className="text-black xl:text-lg text-base font-medium mb-2">Collaboration and Communication</h6>
                   <p>Thriving on effective teamwork and open communication.</p>
                 </div>
                 <div className="border-b border-gray-200 w-full pb-3">
-                  <h6 className="text-black text-lg font-medium mb-2">Continuous Learning</h6>
+                  <h6 className="text-black xl:text-lg text-base font-medium mb-2">Continuous Learning</h6>
                   <p>Fostering a culture of continuous learning to stay at the forefront of industry trends.</p>
                 </div>
                 <Button link="#">Let’s Collaborate</Button>
@@ -47,8 +47,8 @@ export const AboutMe = () => {
       </Section>
       <Section>
         <Container>
-          <div className="flex gap-28 justify-between">
-            <div className="w-1/2">
+          <div className="flex 2xl:gap-28 lg:gap-16 gap-5 justify-between lg:flex-row flex-col">
+            <div className="lg:w-1/2">
               <Title subtext="My Story" text="My Experience" className="mb-4" />
               <p className="mb-5">
                 I have gained valuable insights and expertise in Product Developer. I have had the opportunity to work on a wide range of projects
@@ -86,7 +86,7 @@ export const AboutMe = () => {
                 </tbody>
               </table>
             </div>
-            <div className="w-1/2">
+            <div className="lg:w-1/2">
               <Title subtext="My Study" text="My Education" className="mb-4" />
               <p className="mb-5">
                 I have gained valuable insights and expertise in Product Developer. I have had the opportunity to work on a wide range of projects

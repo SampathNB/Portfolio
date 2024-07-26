@@ -13,7 +13,7 @@ export const Portfolios = ({length, title, isPageTitle = false}: PortfolioTypes)
     <Section>
       <Container>
         <Title isPageTitle={isPageTitle} subtext="Creation" className="mb-5" text={title} />
-        <div className="grid grid-cols-2 gap-10">
+        <div className="grid lg:grid-cols-2 grid-cols-1 2xl:gap-10 gap-5">
           {PortfolioData &&
             PortfolioData.map((portfolio, index) => {
               return (

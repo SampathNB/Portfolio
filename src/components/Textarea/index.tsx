@@ -1,23 +1,25 @@
 import clsx from "clsx";
-import { ChangeEventHandler, ReactNode } from "react";
+import {ChangeEventHandler, forwardRef, ReactNode} from "react";
+import {FieldError, FieldErrorsImpl, Merge} from "react-hook-form";
 
 interface TextareaTypes {
   placeholder: string;
   icon: ReactNode;
   onChange: ChangeEventHandler<HTMLTextAreaElement>;
-  errorText?: string;
+  errorText?: string | undefined | FieldError | Merge<FieldError, FieldErrorsImpl<any>>;
   className?: string;
   name?: string;
   id?: string;
 }
 
-export const Textarea = ({ icon, onChange, placeholder, errorText, className, name, id }: TextareaTypes) => {
+export const Textarea = forwardRef(({icon, onChange, placeholder, errorText, className, name, id}: TextareaTypes, ref) => {
   return (
     <>
       <div className={clsx("text-sm text-black", className)}>
         <div className="relative">
           <span className="absolute top-3 left-2">{icon}</span>
           <textarea
+            ref={ref}
             name={name}
             id={id}
             rows={6}
@@ -30,4 +32,4 @@ export const Textarea = ({ icon, onChange, placeholder, errorText, className, na
       </div>
     </>
   );
-};
+});

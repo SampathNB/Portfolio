@@ -11,6 +11,10 @@ export default {
       colors: {
         primary: "#f35128",
       },
+      screens: {
+        "small-2xl": "1399px",
+        "3xl": "1699px",
+      },
     },
   },
   plugins: [],

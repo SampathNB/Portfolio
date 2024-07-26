@@ -1,22 +1,24 @@
-import { ChangeEventHandler, ReactNode } from "react";
+import {ChangeEventHandler, forwardRef, ReactNode} from "react";
+import {FieldError, FieldErrorsImpl, Merge} from "react-hook-form";
 
 interface InputTypes {
   placeholder: string;
   icon: ReactNode;
   type: string;
   onChange: ChangeEventHandler<HTMLInputElement>;
-  errorText?: string;
+  errorText?: string | undefined | FieldError | Merge<FieldError, FieldErrorsImpl<any>>;
   name?: string;
   id?: string;
 }
 
-export const Input = ({ icon, onChange, placeholder, type, errorText, name, id }: InputTypes) => {
+export const Input = forwardRef(({icon, onChange, placeholder, type, errorText, name, id}: InputTypes, ref) => {
   return (
     <>
       <div className="text-sm text-black">
         <div className="relative">
           <span className="absolute top-1/2 transform -translate-y-1/2 left-2">{icon}</span>
           <input
+            ref={ref}
             name={name}
             id={id}
             type={type}
@@ -29,4 +31,4 @@ export const Input = ({ icon, onChange, placeholder, type, errorText, name, id }
       </div>
     </>
   );
-};
+});

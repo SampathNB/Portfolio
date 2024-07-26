@@ -7,15 +7,15 @@ export const Footer = () => {
     <>
       <footer className="bg-black py-16 text-zinc-400 ">
         <Container>
-          <div className="flex gap-24 justify-between">
-            <div className="w-1/3">
+          <div className="flex gap-24 justify-between lg:flex-nowrap flex-wrap">
+            <div className="lg:w-1/3 w-full">
               <h2 className="text-2xl text-white mb-4 leading-normal font-medium">In Collaboration Harmony Whenever, Wherever, Our Work Unites</h2>
               <p>
                 From career opportunities to freelance collaborations, design guidance, or a simple hello — our doors are open. Let's connect and explore
                 endless possibilities together.
               </p>
             </div>
-            <div className="flex gap-4 w-1/4 justify-between">
+            <div className="flex gap-4 lg:w-1/4 w-2/5 justify-between">
               <div>
                 <h4 className="text-white mb-4 text-lg font-medium">Pages</h4>
                 <div className="flex flex-col text-sm gap-2">
@@ -36,7 +36,7 @@ export const Footer = () => {
                 </div>
               </div>
             </div>
-            <div className="w-1/5">
+            <div className="lg:w-1/5 w-2/5">
               <div className="border-b border-white pb-6 mb-6">
                 <h4 className="text-white mb-2 font-medium">Let’s have a chat</h4>
                 <a href="#" className="flex items-center gap-4 text-sm hover:text-white transition-colors">
