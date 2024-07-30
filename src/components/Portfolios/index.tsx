@@ -1,4 +1,5 @@
 import {PortfolioData} from "@utils";
+import {Button} from "../Button";
 import {Container, Section} from "../ElementsComponents";
 import {Title} from "../Title";
 
@@ -19,7 +20,9 @@ export const Portfolios = ({length, title, isPageTitle = false}: PortfolioTypes)
               return (
                 index < (length ? length : PortfolioData.length) && (
                   <div key={index} className="">
-                    <img className="aspect-video object-cover mb-3" src={portfolio.img} alt={portfolio.name} />
+                    <div className="relative pb-[56.25%]  mb-3">
+                      <img className="absolute w-full h-full left-0 top-0 object-cover" src={portfolio.img} alt={portfolio.name} />
+                    </div>
                     <div className="flex items-center justify-between">
                       <h5 className="text-lg text-black font-medium">{portfolio.name}</h5>
                       <p className="text-sm">
@@ -37,6 +40,13 @@ export const Portfolios = ({length, title, isPageTitle = false}: PortfolioTypes)
               );
             })}
         </div>
+        {length && (
+          <div className="text-center mt-10">
+            <Button isLink link="/portfolio">
+              View All
+            </Button>
+          </div>
+        )}
       </Container>
     </Section>
   );

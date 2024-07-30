@@ -1,4 +1,5 @@
-import { AngelusHomeCare, Espresso, GrandPMS, HVN, PEGClub, Swapier, Veesion, WalkerBay } from "@images";
+import {AngelusHomeCare, Espresso, GrandPMS, HVN, PEGClub, Swapier, Veesion, WalkerBay, WeatherBuddy} from "@images";
+import {Icons} from "../icons";
 
 export const pageLinks = [
   {
@@ -17,12 +18,29 @@ export const pageLinks = [
 
 export const socialLinks = [
   {
-    text: "Facebook",
-    link: "",
-  }
-]
+    name: "Github",
+    path: "https://github.com/SampathNB",
+    icons: Icons.Github,
+  },
+  {
+    name: "LinkedIn",
+    path: "https://in.linkedin.com/in/sampath-bingi",
+    icons: Icons.LinkedIn,
+  },
+  {
+    name: "Facebook",
+    path: "https://www.facebook.com/sampathnbingi/",
+    icons: Icons.Facebook,
+  },
+];
 
 export const PortfolioData = [
+  {
+    img: WeatherBuddy,
+    name: "Weather Buddy",
+    year: 2024,
+    techs: ["React", "Typescript", "Redux toolkit"],
+  },
   {
     img: AngelusHomeCare,
     name: "Angelus Home Care",

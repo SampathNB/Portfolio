@@ -1,7 +1,7 @@
 import {pageLinks} from "@utils";
 import clsx from "clsx";
-import {useState} from "react";
-import {Link, NavLink} from "react-router-dom";
+import {useEffect, useState} from "react";
+import {Link, NavLink, useLocation} from "react-router-dom";
 import {Button} from "../Button";
 import {Container} from "../ElementsComponents";
 
@@ -12,6 +12,11 @@ interface HeaderTypes {
 
 export const Header = ({className, isHomePage = false}: HeaderTypes) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
+
+  const {pathname} = useLocation();
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [pathname]);
 
   const barClassName = "block bg-gray-600 w-5 h-[1px] transition transition-transform transition-opacity transform ease-in";
 
@@ -36,7 +41,7 @@ export const Header = ({className, isHomePage = false}: HeaderTypes) => {
                 </button>
                 {showMenu && (
                   <div className="relative w-full">
-                    <div className="absolute border border-gray-300 p-3 right-0 top-3 flex flex-col text-sm bg-white rounded-lg shadow-xl w-60 text-center font-medium">
+                    <div className="absolute border border-gray-300 p-3 right-0 top-3 flex flex-col text-sm bg-white rounded-lg shadow-xl w-60 text-center font-medium z-10">
                       <div className="flex flex-col text-center gap-3 border-b border-gray-200 pb-3 mb-3">
                         {pageLinks.map((link, index) => {
                           return (

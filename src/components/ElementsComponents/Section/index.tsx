@@ -10,7 +10,7 @@ interface SectionTypes {
 export const Section = ({className, children, noBottomSpace = false}: SectionTypes) => {
   return (
     <>
-      <section className={clsx(className ? className : noBottomSpace ? "2xl:pt-16 pt-10 pb-0" : "2xl:py-16 py-10")}>{children}</section>
+      <section className={clsx(className ? className : noBottomSpace ? "2xl:pt-16 lg:pt-10 pt-7 pb-0" : "2xl:py-16 lg:py-10 py-7")}>{children}</section>
     </>
   );
 };

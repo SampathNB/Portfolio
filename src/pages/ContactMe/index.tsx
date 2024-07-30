@@ -85,12 +85,12 @@ export const ContactMe = () => {
       <Section>
         <Container>
           <div className="max-w-screen-md">
-            <Title className="mb-5" subtext="Get In Touch" text="Contact me" />
+            <Title className="lg:mb-5 mb-3" subtext="Get In Touch" text="Contact me" />
             <p className="mb-4">
               Ready to embark on a collaborative journey or have a question? Feel free to reach out. I'm here to connect and create with you!
             </p>
             <form ref={form} onSubmit={handleSubmit(sendEmail)}>
-              <div className="grid grid-cols-2 gap-5">
+              <div className="grid sm:grid-cols-2 grid-cols-1 gap-5">
                 <Input
                   {...register("firstName")}
                   name="firstName"
@@ -125,7 +125,7 @@ export const ContactMe = () => {
                   id="message"
                   placeholder="Message"
                   icon={Icons.Message}
-                  className="col-span-2"
+                  className="sm:col-span-2 col-span-1"
                   errorText={errors?.message?.message}
                 />
                 <div>
