@@ -1,8 +1,9 @@
-import {createBrowserRouter} from "react-router-dom";
-import {AboutMe} from "../pages/AboutMe";
-import {ContactMe} from "../pages/ContactMe";
-import {Home} from "../pages/Home";
-import {MyWorks} from "../pages/MyWorks";
+import { createBrowserRouter } from "react-router-dom";
+import { AboutMe } from "../pages/AboutMe";
+import { ContactMe } from "../pages/ContactMe";
+import { Home } from "../pages/Home";
+import { MyWorks } from "../pages/MyWorks";
+import { PortfolioSingle } from "../pages/PortfolioSingle";
 
 export const routes = createBrowserRouter([
   {
@@ -20,6 +21,10 @@ export const routes = createBrowserRouter([
   {
     path: "/portfolio",
     Component: MyWorks,
+  },
+  {
+    path: "/portfolio/:id",
+    Component: PortfolioSingle,
   },
   {
     path: "/contact-me",

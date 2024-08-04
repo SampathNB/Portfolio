@@ -10,6 +10,8 @@ export default defineConfig({
       "@components": path.resolve(__dirname, "./src/components"),
       "@utils": path.resolve(__dirname, "./src/utils"),
       "@images": path.resolve(__dirname, "./src/assets/images"),
+      "@apis": path.resolve(__dirname, "./src/apis"),
+      "@data": path.resolve(__dirname, "./src/data"),
     }
   }
 })

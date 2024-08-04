@@ -1,19 +1,19 @@
-import {pageLinks} from "@utils";
+import { pageLinks } from "@utils";
 import clsx from "clsx";
-import {useEffect, useState} from "react";
-import {Link, NavLink, useLocation} from "react-router-dom";
-import {Button} from "../Button";
-import {Container} from "../ElementsComponents";
+import { useEffect, useState } from "react";
+import { Link, NavLink, useLocation } from "react-router-dom";
+import { Button } from "../Button";
+import { Container } from "../ElementsComponents";
 
 interface HeaderTypes {
   className?: string;
   isHomePage?: boolean;
 }
 
-export const Header = ({className, isHomePage = false}: HeaderTypes) => {
+export const Header = ({ className, isHomePage = false }: HeaderTypes) => {
   const [showMenu, setShowMenu] = useState<boolean>(false);
 
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
@@ -29,7 +29,7 @@ export const Header = ({className, isHomePage = false}: HeaderTypes) => {
               SAMPATH BINGI
             </Link>
             <div className="px-4 flex items-center gap-4">
-              {!isHomePage && <Button link="#">Let's Talk</Button>}
+              {!isHomePage && <div className="sm:inline-block hidden"><Button link="#">Let's Talk</Button> </div>}
               <div>
                 <button
                   className="rounded-3xl border border-black flex flex-col gap-[5px] w-14 h-9 items-center justify-center"
@@ -46,7 +46,7 @@ export const Header = ({className, isHomePage = false}: HeaderTypes) => {
                         {pageLinks.map((link, index) => {
                           return (
                             <NavLink
-                              className={({isActive}) => {
+                              className={({ isActive }) => {
                                 return isActive
                                   ? "text-primary capitalize hover:text-black transition-colors"
                                   : "capitalize hover:text-black transition-colors";

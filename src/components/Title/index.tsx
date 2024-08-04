@@ -4,13 +4,13 @@ interface TitleTypes {
   isPageTitle?: boolean;
   isLight?: boolean;
   subtext?: string;
-  text: string;
+  text: string | undefined;
   subtextClassName?: string;
   titleClassName?: string;
   className?: string;
 }
 
-export const Title = ({isPageTitle = false, subtext, text, subtextClassName, titleClassName, className, isLight = true}: TitleTypes) => {
+export const Title = ({ isPageTitle = false, subtext, text, subtextClassName, titleClassName, className, isLight = true }: TitleTypes) => {
   const classNames = "text-black font-medium 2xl:leading-snug leading-tight";
   return (
     <>

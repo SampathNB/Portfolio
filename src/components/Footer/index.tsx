@@ -1,19 +1,18 @@
-import {Icons, pageLinks, socialLinks} from "@utils";
-import {Link} from "react-router-dom";
-import {Container} from "../ElementsComponents";
+import { HomeContent } from "@data";
+import { Icons, pageLinks, socialLinks } from "@utils";
+import { Link } from "react-router-dom";
+import { Container } from "../ElementsComponents";
 
 export const Footer = () => {
+  const data = HomeContent.data.attributes;
   return (
     <>
       <footer className="bg-black sm:py-16 py-7 text-zinc-400">
         <Container>
           <div className="flex lg:gap-24 gap-10 justify-between lg:flex-nowrap flex-wrap flex-col sm:flex-row">
             <div className="lg:w-1/3 w-full">
-              <h2 className="lg:text-2xl text-xl text-white mb-4 leading-normal font-medium">In Collaboration Harmony Whenever, Wherever, Our Work Unites</h2>
-              <p>
-                From career opportunities to freelance collaborations, design guidance, or a simple hello — our doors are open. Let's connect and explore
-                endless possibilities together.
-              </p>
+              <h2 className="lg:text-2xl text-xl text-white mb-4 leading-normal font-medium">{data.collaboration_title}</h2>
+              <p>{data.collaboration_content}</p>
             </div>
             <div className="flex sm:justify-between justify-evenly gap-4 lg:w-1/4 sm:w-2/5">
               <div>

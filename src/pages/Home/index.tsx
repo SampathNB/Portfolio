@@ -1,24 +1,19 @@
-import {Button, Container, Footer, Header, Portfolios, Section, Title} from "@components";
-import {Sampath} from "@images";
-import {Icons, socialLinks} from "@utils";
-import {Link} from "react-router-dom";
+import { Button, Container, Footer, Header, Portfolios, Section, Title } from "@components";
+import { HomeContent } from "@data";
+import { Sampath } from "@images";
+import { Icons, socialLinks } from "@utils";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
-  const skills = ["Communication", "Collaboration", "Design", "development", "Optimization", "Management"];
+  const data = HomeContent.data.attributes;
   return (
     <>
       <section className="relative">
         <Header isHomePage className="lg:w-1/2" />
         <Container>
           <div className="2xl:py-28 sm:py-20 py-10 lg:w-1/2 lg:pr-16 lg:text-left text-center">
-            <Title isPageTitle className="sm:mb-6 mb-4" text="Crafting Connections Your Interface Expert" />
-            <p className="sm:mb-4 mb-3">
-              Greetings! I'm Jenny, your dedicated Interface Artisan. Within the digital tapestry, I weave seamless experiences that transcend the ordinary.
-            </p>
-            <p className="sm:mb-6 mb-3">
-              I specialize in understanding user behaviors, anticipating needs, and creating interfaces that not only look beautiful but intuitively respond to
-              the user's every interaction.
-            </p>
+            <Title isPageTitle className="sm:mb-6 mb-4" text={data.page_title} />
+            <div className="flex flex-col sm:gap-4 gap-3 sm:mb-4 mb-3" dangerouslySetInnerHTML={{ __html: data.hero_content }}></div>
             <div className="flex items-center gap-4 lg:justify-start justify-center">
               <Button link="/contact-me">Hire me</Button>
               <Link to="/portfolio" className="text-sm font-medium text-gray-800 flex items-center gap-1 hover:underline">
@@ -33,7 +28,7 @@ export const Home = () => {
               <div className="md:w-3/4 w-full">
                 <h4 className="mb-5 text-xl font-medium">Skills & Expertise</h4>
                 <div className="flex flex-wrap lg:gap-2 gap-1 md:max-w-md md:justify-start justify-center">
-                  {skills.map((skill: string, index: number) => {
+                  {data.skills_expertise.map((skill: string, index: number) => {
                     return (
                       <div className="text-xs py-1.5 xl:px-4 px-3 border border-white border-opacity-15 rounded-2xl capitalize" key={index}>
                         {skill}
@@ -107,33 +102,28 @@ export const Home = () => {
             <div className="lg:w-1/2">
               <div className="flex flex-col items-start h-full justify-between">
                 <div>
-                  <Title isLight={false} className="sm:pb-8 pb-5" subtext="My Story" text="About Me" titleClassName="text-white" />
-                  <p className="sm:mb-5 mb-3">
-                    Hello! I'm Parker, a passionate creator on a mission to craft meaningful digital experiences. With a blend of creativity and technical
-                    expertise, I specialize in weaving seamless journeys that leave a lasting impact.
-                  </p>
-                  <p className="sm:mb-8 mb-4">
-                    From a young age, I found solace and inspiration in the world of design. What started as a curiosity evolved into a full-fledged passion for
-                    creating experiences that resonate. I believe in the power of design to evoke emotions, tell stories, and transform the way we interact with
-                    the digital realm.
-                  </p>
-                  <Button link="#">Let’s Collaborate</Button>
+                  <Title isLight={false} className="sm:pb-8 pb-5" subtext={data.about_label} text={data.about_title} titleClassName="text-white" />
+                  <div className="flex flex-col sm:gap-5 gap-3 sm:mb-8 mb-4" dangerouslySetInnerHTML={{ __html: data.about_content }}></div>
+                  <div className="flex text-gray-700 gap-2">
+                    <Button isWhite isLink link="/about-me">
+                      Know me more
+                    </Button>
+                    <Button isLink link="/contact-me">
+                      Let’s Collaborate
+                    </Button>
+                  </div>
                 </div>
               </div>
             </div>
             <div className="xl:w-2/5 lg:w-1/2 w-full">
               <div className="flex w-full gap-5 lg:justify-start justify-center">
                 <div className="lg:w-1/3">
-                  <span className="lg:text-6xl text-4xl font-light block mb-3">08+</span>
-                  <p>Years of Experience</p>
+                  <span className="lg:text-6xl text-4xl font-light block mb-3">{data.years_of_exp_num}</span>
+                  <p>{data.years_of_exp_text}</p>
                 </div>
                 <div className="lg:w-1/3">
-                  <span className="lg:text-6xl text-4xl font-light block mb-3">28+</span>
-                  <p>Projects completed</p>
-                </div>
-                <div className="lg:w-1/3">
-                  <span className="lg:text-6xl text-4xl font-light block mb-3">25+</span>
-                  <p>Happy Clients</p>
+                  <span className="lg:text-6xl text-4xl font-light block mb-3">{data.projects_completed_num}</span>
+                  <p>{data.projects_completed_text}</p>
                 </div>
               </div>
             </div>
@@ -144,10 +134,9 @@ export const Home = () => {
       <Section className="bg-[#dbd2c2] 2xl:py-16 lg:py-10 py-7">
         <Container>
           <div className="max-w-screen-sm mx-auto text-center flex flex-col sm:gap-5 gap-3 items-center">
-            <Title text="Selected Explore opportunities connect for new ventures!" />
+            <Title text={data.opportunities_title} />
             <p className="text-black text-sm opacity-80">
-              Embark on a journey of possibilities and connect with me for new ventures, where innovation meets opportunity, and together, we craft success
-              stories.
+              {data.opportunities_content}
             </p>
             <Button isLink link="/contact-me" isWhite>
               Get Started

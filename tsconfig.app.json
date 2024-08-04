@@ -35,6 +35,12 @@
       "@images": [
         "./src/assets/images"
       ],
+      "@apis": [
+        "./src/apis"
+      ],
+      "@data": [
+        "./src/data"
+      ],
     }
   },
   "include": [

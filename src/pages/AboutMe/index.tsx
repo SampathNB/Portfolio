@@ -1,5 +1,4 @@
-import {Button, Container, Footer, Header, Section, Title} from "@components";
-import {About} from "@images";
+import { Button, Container, Footer, Header, Section, Title } from "@components";
 
 export const AboutMe = () => {
   return (
@@ -9,24 +8,23 @@ export const AboutMe = () => {
         <Container>
           <Title subtext="About Me" text="Meet Sampath" className="2xl:mb-7 mb-4" />
           <div className="flex 2xl:gap-20 gap-10 justify-between">
-            <div className="w-2/5 lg:block hidden">
-              <img src={About} alt="" />
-            </div>
             <div className="lg:w-3/5">
               <div className="flex flex-col small-2xl:gap-4 gap-2 items-start">
                 <p>
-                  Hello! I'm Parker, a passionate creator on a mission to craft meaningful digital experiences. With a blend of creativity and technical
-                  expertise, I specialize in weaving seamless journeys that leave a lasting impact.
+                  I’m Sampath, an enthusiastic front-end developer with a diverse and extensive background of over 7+ years in web development. Currently, I thrive as a Team Leader of frontend at White Orange Software, where I excel in creating engaging and user-friendly interfaces.
                 </p>
                 <p>
-                  From a young age, I found solace and inspiration in the world of design. What started as a curiosity evolved into a full-fledged passion for
-                  creating experiences that resonate. I believe in the power of design to evoke emotions, tell stories, and transform the way we interact with
-                  the digital realm.
+                  My adventure into development began with a spark of curiosity and has since blossomed into a rewarding career. From humble beginnings in Web designing and later I'm upgrading skill to Frontend Developer, I’ve evolved by tackling a spectrum of projects—from ERM, Finance, and other web-applications each one a chapter in my growth story.
                 </p>
                 <p className="mb-4">
                   At the core of my professional journey lies an unwavering passion for development and a commitment to values that shape my approach to every
                   project. It's more than just a job; it's a calling to turn ideas into extraordinary digital experiences.
                 </p>
+                <Button link="/contact-me">Let’s Collaborate</Button>
+              </div>
+            </div>
+            <div className="lg:w-2/5">
+              {/* <div className="flex flex-col small-2xl:gap-4 gap-2 items-start">
                 <div className="border-b border-gray-200 w-full pb-3">
                   <h6 className="text-black xl:text-lg text-base font-medium mb-2">User-Centric Approach</h6>
                   <p>Prioritizing user needs and preferences in every decision.</p>
@@ -39,8 +37,7 @@ export const AboutMe = () => {
                   <h6 className="text-black xl:text-lg text-base font-medium mb-2">Continuous Learning</h6>
                   <p>Fostering a culture of continuous learning to stay at the forefront of industry trends.</p>
                 </div>
-                <Button link="#">Let’s Collaborate</Button>
-              </div>
+              </div> */}
             </div>
           </div>
         </Container>
