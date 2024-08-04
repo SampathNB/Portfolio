@@ -66,31 +66,31 @@ export const Home = () => {
           <Title className="mb-5" subtextClassName="border-black" subtext="Exprtise" text="What I Do" />
           <div className="grid lg:grid-cols-4 ms:grid-cols-2 grid-cols-1 xl:gap-5 gap-3 text-black">
             <div className="bg-blue-200 sm:p-4 p-2 flex flex-col xl:gap-7 sm:gap-3 gap-2">
-              <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" />
+              {/* <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" /> */}
               <div>
-                <h4 className="sm:text-xl text-lg font-medium sm:mb-2 mb-1">Web Development</h4>
+                <h4 className="sm:text-xl text-lg font-medium sm:mb-2 mb-1">Frontend Development</h4>
                 <p className="text-sm">From concept to code, I bring designs to life for seamless online experiences.</p>
               </div>
             </div>
             <div className="bg-pink-200 sm:p-4 p-2 flex flex-col xl:gap-7 sm:gap-3 gap-2">
-              <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" />
+              {/* <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" /> */}
               <div>
-                <h4 className="sm:text-xl text-lg font-medium sm:mb-2 mb-1">Mobile App</h4>
-                <p className="text-sm">Create intuitive and visually appealing designs for iOS and Android applications.</p>
+                <h4 className="sm:text-xl text-lg font-medium sm:mb-2 mb-1">UI Developement</h4>
+                <p className="text-sm">Create intuitive and visually appealing designs.</p>
               </div>
             </div>
             <div className="bg-green-200 sm:p-4 p-2 flex flex-col xl:gap-7 sm:gap-3 gap-2">
-              <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" />
+              {/* <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" /> */}
               <div>
                 <h4 className="sm:text-xl text-lg font-medium sm:mb-2 mb-1">Webflow</h4>
                 <p className="text-sm">I bring innovation to user experiences by incorporating dynamic & engaging design</p>
               </div>
             </div>
             <div className="bg-purple-200 sm:p-4 p-2 flex flex-col xl:gap-7 sm:gap-3 gap-2">
-              <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" />
+              {/* <img src="https://cdn.prod.website-files.com/65be2b47014f55c8490dc268/65f3d3a85d2e8bd91b61bd95_garphics-01.png" alt="" /> */}
               <div>
-                <h4 className="sm:text-xl text-lg font-medium sm:mb-2 mb-1">e-Commerce</h4>
-                <p className="text-sm">I specialize in crafting captivating and user-centric e-commerce experiences</p>
+                <h4 className="sm:text-xl text-lg font-medium sm:mb-2 mb-1">Animation</h4>
+                <p className="text-sm">Making Content live with visual experiences.</p>
               </div>
             </div>
           </div>

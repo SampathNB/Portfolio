@@ -25,7 +25,7 @@ export const PortfolioSingle = () => {
                   {project?.Platforms_Library?.map((tech: string, index: number | null | undefined) => (
                     <span key={index}>
                       {tech}
-                      {!(index + 1 === project.Platforms_Library.length) && ","}{" "}
+                      {!(index! + 1 === project.Platforms_Library.length) && ","}{" "}
                     </span>
                   ))}
                 </p>
