@@ -8,5 +8,6 @@ export {default as PEGClub} from "./portfolios/peg-club.webp";
 export {default as Swapier} from "./portfolios/swapier.webp";
 export {default as Veesion} from "./portfolios/veesion.webp";
 export {default as WalkerBay} from "./portfolios/walkersbay.webp";
-export {default as WeatherBuddy} from "./portfolios/weather-buddy.webp";
+export {default as WeatherBuddy} from "./portfolios/weather-buddy.jpg";
+export {default as WOS} from "./portfolios/wos-website.jpg";
 export {default as Sampath} from "./Sampath.webp";

@@ -1,12 +1,11 @@
-import { Button, Container, Footer, Header, Section, Title } from "@components";
-import { Projects } from "@data";
-import { useParams } from "react-router-dom";
-
+import {Button, Container, Footer, Header, Section, Title} from "@components";
+import {Projects} from "@data";
+import {useParams} from "react-router-dom";
 
 export const PortfolioSingle = () => {
-  let { id } = useParams()
+  const {id} = useParams();
   const data = Projects.data.find((project) => project.id == id);
-  const project = data?.attributes
+  const project = data?.attributes;
   return (
     <>
       <Header />
@@ -46,18 +45,19 @@ export const PortfolioSingle = () => {
           <div className="flex gap-10 md:flex-row flex-col">
             <div className="md:w-2/5">
               <Title className="mb-5" text="Project Overview" />
-              <div className="flex flex-col gap-1 sm:mb-4 mb-3" dangerouslySetInnerHTML={{ __html: project?.Project_Overview }}></div>
+              <div className="flex flex-col gap-1 sm:mb-4 mb-3" dangerouslySetInnerHTML={{__html: project?.Project_Overview}}></div>
             </div>
             <div className="md:w-2/5">
               <Title className="mb-5" text="What I Did" />
-              <div className="flex flex-col gap-1 sm:mb-4 mb-3" dangerouslySetInnerHTML={{ __html: project?.What_I_Did }}></div>
-
-              <Button target="_blank" link={project?.URL}>Visit Website</Button>
+              <div className="flex flex-col gap-1 sm:mb-4 mb-3 list" dangerouslySetInnerHTML={{__html: project?.What_I_Did}}></div>
+              <Button target="_blank" link={project?.URL}>
+                Visit Website
+              </Button>
             </div>
           </div>
         </Container>
       </Section>
       <Footer />
     </>
-  )
-}
+  );
+};
