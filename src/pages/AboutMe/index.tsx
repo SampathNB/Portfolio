@@ -1,7 +1,7 @@
 import {Button, Container, Footer, Header, Section, Title} from "@components";
 
 export const AboutMe = () => {
-  const TechSkills = ["React", "HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "Redux", "Redux Toolkit"];
+  const TechSkills = ["React", "HTML", "CSS", "JavaScript", "Bootstrap", "Tailwind", "Redux", "Redux Toolkit", "Zustand"];
   const HardSkills = ["Manage and Plan", "Frontend Design with development", "Uses of plugins", "Fluid Design", "Knowledge with Browser friendly"];
   const SoftSkills = ["Leadership", "Problem Solving", "Management", "Effective Communication", "Creativity", "Willingness to learn"];
   return (
@@ -14,7 +14,7 @@ export const AboutMe = () => {
             <div className="lg:w-3/5">
               <div className="flex flex-col small-2xl:gap-4 gap-2 items-start">
                 <p>
-                  I’m Sampath, an enthusiastic front-end developer with a diverse and extensive background of over 7+ years in web development. Currently, I
+                  I’m Sampath, an enthusiastic front-end developer with a diverse and extensive background of over 8.5+ years in web development. Currently, I
                   thrive as a Team Leader of frontend at White Orange Software, where I excel in creating engaging and user-friendly interfaces.
                 </p>
                 <p>
@@ -85,9 +85,23 @@ export const AboutMe = () => {
                   <tr>
                     <td width="30%">
                       <div className="flex items-center gap-2">
-                        <span>2021</span>
+                        <span>2024</span>
                         <span className="h-[1px] w-3 bg-current opacity-50"></span>
                         <span>Present</span>
+                      </div>
+                    </td>
+                    <td>React Team Leader</td>
+                    <td className="text-right">VMax e-Solutions India Private Limited</td>
+                  </tr>
+                  <tr>
+                    <td className="border-b border-gray-200" colSpan={3}></td>
+                  </tr>
+                  <tr>
+                    <td width="30%">
+                      <div className="flex items-center gap-2">
+                        <span>2021</span>
+                        <span className="h-[1px] w-3 bg-current opacity-50"></span>
+                        <span>2024</span>
                       </div>
                     </td>
                     <td>Frontend Team Leader</td>
