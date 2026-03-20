@@ -1,7 +1,25 @@
-import {MeeticketResort, WeatherBuddy, WOS} from "@images";
+import { MeeticketResort, SWMPortal, WeatherBuddy, WOS } from "@images";
 
 export const Projects = {
   data: [
+    {
+      id: 13,
+      attributes: {
+        Title: "SWM Portal",
+        Developed_Date: "2026",
+        createdAt: "2025-08-03T11:12:14.128Z",
+        updatedAt: "2024-08-03T11:15:10.395Z",
+        publishedAt: "2025-10-03T11:12:17.634Z",
+        Img_URL: SWMPortal,
+        Client: "Vmax India",
+        URL: "https://swmchennaidevui.vmaxtechservices.help/login",
+        Platforms_Library: ["React", "Zustand", "Tailwind", "Chart.js", "Formik", "Leaflet", "AGGrid"],
+        Project_Overview:
+          "<p>SWM Portal is a web application for track vehicle, live tracking and vehicle play back feature</p>",
+        What_I_Did:
+          "<ul><li>Gather all the details and information.</li><li>Integrated Leaflet map view for live tracking vehicle.</li><li>Integrated Masters with formik for form validation.</li></ul>",
+      },
+    },
     {
       id: 12,
       attributes: {
@@ -13,7 +31,7 @@ export const Projects = {
         Img_URL: MeeticketResort,
         Client: "Vmax India",
         URL: "https://meeticketdevui.vmaxtechservices.help/amrabad-resort",
-        Platforms_Library: ["React", "Tailwind", "Payment Gateway/PayTM"],
+        Platforms_Library: ["React", "Zustand", "Tailwind", "Payment Gateway/PayTM"],
         Project_Overview:
           "<p>Meeticket Resort house booking is a web application for booking resort houses.</p><p>This project was developed to provide an easy and efficient way for users to book resort houses.</p>",
         What_I_Did:
